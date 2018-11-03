@@ -1,0 +1,11 @@
+<h1>Welcome to the Cookbook!</h1>
+
+<h6>Here's a list of your yummy recipes:</h6>
+
+<ul>
+  <% @recipes.each_with_index do |r, ind| %>
+  <li><%= ind + 1%> - <%= r.name %> - <%= r.description %> - <a href="/recipes/<%=ind%>">View more</a></li>
+  <% end %>
+</ul>
+
+<a href="/new">Add a recipe</a>
