@@ -75,14 +75,17 @@ a:hover {
 .show {
   position: absolute;
   color: white;
-  font-family: 'Yeseva', 'sans-serif';
+}
 
+.show p {
+  font-family: 'Yeseva', 'sans-serif';
 }
 
 .show h4 {
   color: #15f2ea;
   padding: 18px 0px;
-  opacity: 0.8;
+  opacity: 0.9;
+  font-size: 22px;
 }
 
 .show h3 {
