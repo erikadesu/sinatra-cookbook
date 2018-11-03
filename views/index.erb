@@ -1,11 +1,28 @@
-<h1>Welcome to the Cookbook!</h1>
-
-<h6>Here's a list of your yummy recipes:</h6>
-
-<ul>
-  <% @recipes.each_with_index do |r, ind| %>
-  <li><%= ind + 1%> - <%= r.name %> - <%= r.description %> - <a href="/recipes/<%=ind%>">View more</a></li>
-  <% end %>
-</ul>
-
-<a href="/new">Add a recipe</a>
+ <div class="banner" style="">
+  <div class="banner-content">
+    <h1>Welcome to the Cookbook</h1>
+    <p>The best recipes are here</p>
+    <div>
+      <a href="/new" class="btn btn-lg btn-info button">Add a recipe</a>
+    </div>
+    <div class="view">
+      <h3><a href="#index">View all recipes</a></h3>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2"> -->
+     <h2 class="index title text-center">Here's a list of your yummy recipes:</h2>
+    <div id="index" class="index text-left">
+   <% @recipes.each_with_index do |r, ind| %>
+    <h3 class=><a href="/recipes/<%=ind%>"><%= ind + 1%> - <%= r.name %></a></h3>
+    <p><em><%= r.description %></em></p>
+    <% end %>
+    </div>
+    <div class="padding-bottom">
+      <a href="/new">Add a recipe!</a>
+    </div>
+ <!--    </div>
+  </div>
+</div> -->

@@ -17,10 +17,6 @@ get '/' do
   erb :index
 end
 
-get '/about' do
-  erb :about
-end
-
 get '/new' do
   erb :new
 end
@@ -34,7 +30,7 @@ end
 
 get '/recipes/:id' do
   cookbook = Cookbook.new(File.join(__dir__, 'recipes.csv'))
-  id = params['id'].to_i - 1
+  id = params['id'].to_i
   @recipe = cookbook.find(id)
   erb :show
 end

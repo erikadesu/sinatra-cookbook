@@ -1,9 +1,15 @@
-<h1><%= @recipe.name %></h1>
-
-
-<h2><%= @recipe.description %></h2>
-
-<h4>Ingredients</h4>
-<p><%= @recipe.ingredients %></p>
-<h4>Instructions</h4>
-<p><%= @recipe.instructions %></p>
+<div class="show">
+  <div class="title">
+    <h1><%= @recipe.name %></h1>
+  </div>
+  <div class="description">
+    <h3><%= @recipe.description %></h3>
+  </div>
+  <div class="recipe">
+  <h4>Ingredients</h4>
+  <p><%= @recipe.ingredients %></p>
+  <h4>Instructions</h4>
+  <p><%= @recipe.instructions %></p>
+  </div>
+  <a class="button padding-bottom" href="/">Back</a>
+</div>
